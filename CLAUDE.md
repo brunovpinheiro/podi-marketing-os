@@ -89,6 +89,7 @@ padrão e siga.
 
 Estão detalhadas nas camadas certas, mas ficam repetidas aqui porque errar nelas custa caro:
 
+- **A marca é masculina** — "o Podi", "do Podi", "no Podi". Nunca "a Podi". (`brand/README.md`)
 - **Cor de marca `#48DB84` nunca é cor de texto.** Só fundo. Texto em cima dela é `#101010`
   — **nunca branco**. Link de marca sobre branco é `#0C6E3B`; no dark mode, `#6FE9A2`.
   (`brand/README.md`)
@@ -97,7 +98,7 @@ Estão detalhadas nas camadas certas, mas ficam repetidas aqui porque errar nela
   entregabilidade e de LGPD. (`brand/README.md`)
 - **Link do app é sempre `https://podi.podiapp.com.br/podi-e931a`.** Nunca `podi.com.br/app`.
   (`brand/links-oficiais.md`)
-- **Fotografia da Podi segue `brand/photography/STYLE-LOCK-PODI.md`.** Não se inventa direção
+- **Fotografia do Podi segue `brand/photography/STYLE-LOCK-PODI.md`.** Não se inventa direção
   visual nova, e o bloco `STYLE LOCK` se copia sem editar uma palavra.
 - **Newsletter é HTML de e-mail, não de site.** Só tabelas, CSS inline, sem flex/grid/var().
   (`design-system/newsletter/guidelines/email-compat.md`)

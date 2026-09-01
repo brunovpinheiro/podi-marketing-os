@@ -1,6 +1,6 @@
 # projects/ — o trabalho, separado dos recursos oficiais
 
-O Marketing OS guarda os **recursos oficiais** da Podi: brand, design system, templates,
+O Marketing OS guarda os **recursos oficiais** do Podi: brand, design system, templates,
 skills. Um material específico — uma campanha, uma edição, um envio — **não é** recurso
 oficial e não altera nenhum deles.
 

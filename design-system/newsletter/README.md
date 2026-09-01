@@ -1,6 +1,6 @@
 # Design System — Newsletter
 
-O sistema visual das newsletters e e-mails da Podi.
+O sistema visual das newsletters e e-mails do Podi.
 
 ```
 tokens.md        Cor, tipografia, espaçamento, dark mode, tamanhos de imagem

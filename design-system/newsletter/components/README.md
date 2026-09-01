@@ -35,7 +35,7 @@ Entre blocos, usar `99-spacer`.
 
 ## O header do Podi News
 
-Toda edição do **Podi News** abre com `00-hero-podi-news.html` — um único card branco de
+Toda edição do **Podi News** abre com `00-hero-podi-news.html` — um único card de
 raio 20px que empacota, nesta ordem:
 
 1. topbar de 88px com logo Podi à esquerda e Tacla Labs à direita;
@@ -47,12 +47,18 @@ Fonte do design: Figma **Podi-News-26-27**, node `1:422` (`hero-podi-news`).
 **Não** usar `01-header` + `02a` + `02` + `03` soltos numa edição do Podi News. Nas outras
 frentes, o header continua sendo o `01-header.html`.
 
-Duas coisas que não podem ser trocadas:
+Dark mode:
 
-- O card **não escurece** no dark mode. Ele leva `.dm-logo`, porque o "Tacla" do logo é preto.
-- Por consequência, o texto **dentro deste card não leva** `.dm-ink` / `.dm-body` / `.dm-tag`.
-  Seria a única forma de acabar com texto claro sobre fundo branco. É a única seção do
-  repositório onde o texto fica sem classe de dark mode — e é de propósito.
+- O card **escurece como os cards de notícia**. Ele leva `.dm-surface`, e o texto leva
+  `.dm-ink` / `.dm-body` / `.dm-tag` / `.dm-accent` como em qualquer outra seção.
+- **A topbar é a exceção.** Ela fica numa placa branca própria (`.dm-logo`, com raio
+  `20px 20px 0 0` para casar com o topo do card) e permanece branca nos dois modos.
+  O "Tacla" do logo da Tacla Labs é preto e sumiria sobre `#242424`, e o
+  `email-compat.md` proíbe trocar arquivo de imagem por CSS — a troca falha no Gmail e
+  no Outlook. Por isso os dois logos ficam sem classe de dark mode: o fundo atrás deles
+  é branco de qualquer jeito.
+- Quando existir uma arte oficial da Tacla Labs legível sobre fundo escuro, a placa sai
+  e a topbar passa a herdar o `.dm-surface` do card. Até lá, ela fica.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: newsletter-podi
-description: Monta uma newsletter, Podi News, informativo interno ou e-mail marketing da Podi a partir de um briefing em projects/_inbox/<slug>/. Use quando pedirem para gerar, montar ou criar uma newsletter, um Podi News, um informativo interno ou um e-mail marketing a partir de um documento e uma pasta de imagens.
+description: Monta uma newsletter, Podi News, informativo interno ou e-mail marketing do Podi a partir de um briefing em projects/_inbox/<slug>/. Use quando pedirem para gerar, montar ou criar uma newsletter, um Podi News, um informativo interno ou um e-mail marketing a partir de um documento e uma pasta de imagens.
 ---
 
 # Montar uma newsletter Podi

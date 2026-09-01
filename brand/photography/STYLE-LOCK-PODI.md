@@ -121,7 +121,7 @@ Para peças de outlet. Usar o STYLE LOCK **§4.B**.
 
 ### 2.6 Paleta PODI
 
-O verde oficial da Podi é **`#48DB84`** (`brand/README.md`). Os nomes em inglês abaixo são a tradução
+O verde oficial do Podi é **`#48DB84`** (`brand/README.md`). Os nomes em inglês abaixo são a tradução
 desse verde para o vocabulário que os geradores entendem — **não** hexadecimais alternativos.
 
 ```
@@ -560,10 +560,10 @@ the posture is relaxed and caught mid-moment rather than held for the camera.
 
 ## 8. Nota sobre o verde
 
-**Decidido:** o verde oficial da Podi é **`#48DB84`** — matiz ~145°, dentro da faixa emerald.
+**Decidido:** o verde oficial do Podi é **`#48DB84`** — matiz ~145°, dentro da faixa emerald.
 Os três valores padrão abaixo ficam **confirmados** como a tradução dele; as variantes lime e
 jade seguem documentadas apenas como registro do que foi descartado.
 
-Os prompts usam **"vivid emerald green" / "deep pine green" / "soft mint green"** como valores padrão, escolhidos por serem os que mais se aproximam da monocromia verde de `refs/a0658801`. Se o verde oficial da Podi fosse mais **amarelado** (lime/spring), os termos seriam `vivid spring green` / `deep olive green` / `pale pistachio green`; se fosse mais **azulado** (teal/jade), seriam `vivid jade green` / `deep teal green` / `pale seafoam green`. Mantenha sempre a estrutura de **três valores** — é ela que dá profundidade sem quebrar a monocromia.
+Os prompts usam **"vivid emerald green" / "deep pine green" / "soft mint green"** como valores padrão, escolhidos por serem os que mais se aproximam da monocromia verde de `refs/a0658801`. Se o verde oficial do Podi fosse mais **amarelado** (lime/spring), os termos seriam `vivid spring green` / `deep olive green` / `pale pistachio green`; se fosse mais **azulado** (teal/jade), seriam `vivid jade green` / `deep teal green` / `pale seafoam green`. Mantenha sempre a estrutura de **três valores** — é ela que dá profundidade sem quebrar a monocromia.
 
 **No interior o verde importa mais.** O ambiente de mall é cinza-pedra e branco, muito mais neutro que o azul-céu do exterior — então o accent verde é praticamente a única cor do quadro. Isso é bom para a marca, mas exige que o verde apareça em **volume suficiente** (peça de roupa inteira, não detalhe) para o frame não ler como uma foto dessaturada por acidente.

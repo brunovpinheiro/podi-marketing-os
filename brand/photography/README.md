@@ -26,7 +26,7 @@ A fonte única é [`STYLE-LOCK-PODI.md`](STYLE-LOCK-PODI.md). Este arquivo só d
 
 ## O verde
 
-O verde oficial da Podi é **`#48DB84`** (`brand/README.md`), e ele está resolvido dentro do
+O verde oficial do Podi é **`#48DB84`** (`brand/README.md`), e ele está resolvido dentro do
 Style Lock: os termos `vivid emerald green` / `deep pine green` / `soft mint green` são a
 tradução dele para o vocabulário que os geradores entendem. Não são hexadecimais
 alternativos e não se trocam por campanha.

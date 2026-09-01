@@ -37,7 +37,8 @@
 
 ## Conteúdo e envio
 - [ ] Subject ≤ 45 caracteres, sem emoji duplicado, sem CAPS
-- [ ] Rodapé com razão social, endereço, motivo do recebimento e descadastro
+- [ ] Rodapé com `© <ano> - Podi App`, motivo do recebimento e descadastro
+- [ ] Links de Política de Privacidade e Termos de Uso conforme `brand/links-oficiais.md`
 - [ ] Todos os links testados e com `target="_blank"`
 - [ ] HTML final < 100 KB (`wc -c`)
 - [ ] Sem `<script>`, `<form>`, `<iframe>`, `<video>`

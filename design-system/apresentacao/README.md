@@ -1,6 +1,6 @@
 # Design System — Apresentação
 
-O sistema visual dos decks e apresentações da Podi. Canvas fixo **16:9, 1920 × 1080**.
+O sistema visual dos decks e apresentações do Podi. Canvas fixo **16:9, 1920 × 1080**.
 
 ```
 tokens.md        Cor, cor secundária, tipografia de projeção, espaçamento, imagens

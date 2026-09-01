@@ -10,6 +10,87 @@ entra sozinho no próximo e-mail.
 
 ---
 
+## 2026-09-01 — Podi é sempre masculino
+
+A marca era tratada ora no masculino, ora no feminino. Fica definido: **o Podi**, **do Podi**,
+**no Podi**, **pelo Podi**. Nunca "a Podi".
+
+### Alterado
+
+- **Ocorrências no feminino corrigidas** em `brand/`, `design-system/`, `.claude/skills/`,
+  `examples/`, `skills/README.md`, `README.md`, `CLAUDE.md` e nas entradas antigas deste
+  changelog.
+
+### Por quê
+
+Nome de marca não tem gênero por si — quem define é o uso. O time fala "o Podi", e material
+que diga "a Podi" soa como se fosse de outra empresa. Deixar a regra escrita evita que cada
+peça decida sozinha.
+
+**Ação necessária:** material já montado que diga "a Podi" ou "da Podi" precisa ser corrigido
+no próximo envio.
+
+---
+
+
+## 2026-09-01 — hero do Podi News passa a ter dark mode
+
+O card de abertura das edições do Podi News era o único do repositório que ficava branco
+no dark mode, com o texto sem classe de tema. Agora ele acompanha os cards de notícia.
+
+### Alterado
+
+- **`00-hero-podi-news.html`** — o card externo troca `.dm-logo` por `.dm-surface`:
+  no dark ele vai para `#242424`, igual a `11-card-noticia` e `12-card-noticia-compacta`.
+- **Texto do hero** ganha as classes que faltavam: `.dm-ink` na headline, `.dm-body` no
+  texto de apoio, e `.dm-tag` + `.dm-accent` no eyebrow. O hero deixa de ser a exceção
+  em que o texto ficava sem tema.
+- **A topbar dos logos** ganhou placa branca própria (`.dm-logo` com raio
+  `20px 20px 0 0`), antes herdada do card inteiro.
+
+### Por quê
+
+O card branco fixo destoava do resto da peça no dark mode: a edição abria com um bloco
+claro e seguia com cards escuros. A razão original da trava era só o logo da Tacla Labs,
+que tem o "Tacla" em preto — e isso se resolve isolando a topbar, sem prender o card todo.
+
+### Limitação conhecida
+
+A topbar **continua branca nos dois modos**. Não existe no repositório uma arte da Tacla
+Labs legível sobre fundo escuro (só `brand/assets/header/logo-tacla-labs.png`, com o
+"Tacla" preto), e o `email-compat.md` proíbe trocar arquivo de imagem por CSS — a troca
+falha no Gmail e no Outlook. Quando a arte negativa existir, a placa sai e a topbar herda
+o `.dm-surface` do card.
+
+**Ação necessária:** edições do Podi News já montadas continuam com o hero branco no dark
+mode. Para atualizar uma peça, no bloco do hero: trocar `class="dm-logo"` por
+`class="dm-surface"` na tabela do card, envolver a `<td>` da topbar em
+`bgcolor="#FFFFFF" class="dm-logo"` com `border-radius:20px 20px 0 0`, e acrescentar
+`.dm-ink`, `.dm-body`, `.dm-tag` e `.dm-accent` nos textos. Os exemplos em
+`examples/newsletter/` ainda estão no padrão antigo.
+
+---
+
+## 2026-09-01 — rodapé legal da newsletter
+
+O rodapé deixou de pedir razão social e endereço, e os links jurídicos passaram a ser fixos.
+
+### Alterado
+
+- **Linha de copyright** do rodapé passa de `© {{ANO}} {{RAZAO_SOCIAL}} · {{ENDERECO}}`
+  para `© {{ANO}} - Podi App`. Os dois placeholders sumiram: eram preenchidos à mão a cada
+  envio, e é justamente aí que aparecia divergência entre uma newsletter e outra.
+- **Política de Privacidade e Termos de Uso** viram URLs fixas no componente, em vez de
+  `{{URL_PRIVACIDADE}}` / `{{URL_TERMOS}}`:
+  `https://www.podiapp.com.br/politica-privacidade/` e
+  `https://www.podiapp.com.br/termos-de-uso.html`. Registradas em `brand/links-oficiais.md`.
+- Atualizados junto: `91-footer-legal.html`, os três exemplos em `examples/newsletter/`,
+  `qa-checklist.md`, `email-compat.md` e a tabela de frentes em `brand/README.md`.
+
+**Ação necessária:** newsletter já montada em `saida/` e ainda não enviada — troque o
+rodapé pelo componente atualizado. Os links antigos `podi.com.br/privacidade` e
+`podi.com.br/termos` não existem.
+
 ## 2026-09-01 — apresentações e cor secundária
 
 O repositório deixou de cobrir um material só. **Apresentação** entra ao lado de newsletter,
@@ -40,7 +121,7 @@ regra escrita.
   logo dentro de uma placa branca em toda capa. Agora ele vai branco direto sobre o verde,
   como nos decks que o time já fazia.
   Junto veio a regra em `brand/README.md`: **logo não é texto**. A regra de contraste do
-  verde governa palavras; o logo é marca gráfica, e branco sobre o verde é como a Podi
+  verde governa palavras; o logo é marca gráfica, e branco sobre o verde é como o Podi
   assina. O que continua proibido é recolorir por `filter` ou por efeito.
 - **O rodapé de todo slide é assinado pelo logo**, não pela palavra "Podi". Assinatura de
   marca é a marca; texto no lugar dela é o tipo de detalhe que ninguém nota no slide 3 e
@@ -122,7 +203,7 @@ regra escrita.
 
 ### Adicionado
 
-- **`brand/photography/`** — a direção fotográfica da Podi passa a ser diretriz oficial de
+- **`brand/photography/`** — a direção fotográfica do Podi passa a ser diretriz oficial de
   Brand, no mesmo nível da cor e do logo. Contém o `STYLE-LOCK-PODI.md` migrado íntegro do
   repositório de fotografia, as 5 referências que o originaram e um `README.md` dizendo o
   que ali é normativo (DNA, tradução para interior, blocos STYLE LOCK, checklist, verde) e
@@ -158,7 +239,7 @@ regra escrita.
 
 ## 2026-09-01 — Podi Marketing OS
 
-O repositório deixou de ser "as newsletters da Podi" e passou a ser o **Podi Marketing OS**:
+O repositório deixou de ser "as newsletters do Podi" e passou a ser o **Podi Marketing OS**:
 a base oficial de padrões para todo material de Marketing, Design e Publicidade. Newsletter
 continua sendo o único material coberto — o que mudou foi a arrumação, para que um segundo
 tipo de material caiba sem herdar as limitações de e-mail.

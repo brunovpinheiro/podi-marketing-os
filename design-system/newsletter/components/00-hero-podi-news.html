@@ -3,26 +3,35 @@
      Figma: Podi-News-26-27, node 1:422 (hero-podi-news).
 
      Substitui o conjunto 01-header + 02a-eyebrow + 02-hero-title + 03-hero-image:
-     aqui os quatro vivem DENTRO de um único card branco de raio 20px —
+     aqui os quatro vivem DENTRO de um único card de raio 20px —
      topbar de logos (88px) · imagem 536x301 flush · eyebrow + headline + apoio.
 
      Em newsletter que NÃO é Podi News, continuar usando 01-header.
 
-     DARK MODE — o card inteiro leva .dm-logo e permanece BRANCO: o "Tacla" do logo
-     é preto e sumiria sobre card escuro. Por isso o texto aqui dentro NÃO leva
-     .dm-ink / .dm-body / .dm-tag — as classes clareariam o texto sobre fundo branco.
-     Esta é a única seção do repo onde o texto fica sem classe de dark mode.
+     DARK MODE — o card acompanha os cards de notícia: .dm-surface leva o fundo para
+     #242424, e o texto leva .dm-ink / .dm-body / .dm-tag / .dm-accent como em
+     qualquer outra seção.
+
+     A EXCEÇÃO É A TOPBAR. O "Tacla" do logo da Tacla Labs é preto e sumiria sobre o
+     card escuro, e o email-compat proíbe trocar arquivo de imagem por CSS (falha no
+     Gmail e no Outlook). Por isso a topbar — e só ela — continua sobre placa branca
+     .dm-logo, com raio 20px nos cantos de cima para casar com o card. Os dois logos
+     ficam sem classe de dark mode de propósito: a placa atrás deles é branca nos
+     dois modos.
+
+     Quando existir uma arte da Tacla Labs legível sobre fundo escuro, a placa sai e
+     a topbar passa a herdar o .dm-surface do card.
 
      Imagens: podi 96x48 (exportar 192x96) · tacla labs 167x24 (exportar 334x48)
               hero 536x301 (exportar 1072x602).
      ============================================================================ -->
 <tr>
   <td class="p-mobile" style="padding:28px 32px 0 32px;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" class="dm-logo" style="width:100%;background-color:#FFFFFF;border-radius:20px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" class="dm-surface" style="width:100%;background-color:#FFFFFF;border-radius:20px;">
 
-      <!-- topbar: logos -->
+      <!-- topbar: logos — placa branca nos dois modos (ver cabeçalho) -->
       <tr>
-        <td style="padding:0;">
+        <td bgcolor="#FFFFFF" class="dm-logo" style="padding:0;background-color:#FFFFFF;border-radius:20px 20px 0 0;">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
             <tr>
               <td align="left" valign="middle" class="p-logo" style="padding:20px 28px;">
@@ -52,16 +61,16 @@
         <td align="center" class="card-mobile" style="padding:28px 29px;">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
             <tr>
-              <td align="center" bgcolor="#D4F0DF" style="border-radius:100px;padding:7px 14px;">
-                <span style="font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0C6E3B;">{{EYEBROW}}</span>
+              <td align="center" bgcolor="#D4F0DF" class="dm-tag" style="border-radius:100px;padding:7px 14px;">
+                <span class="dm-accent" style="font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0C6E3B;">{{EYEBROW}}</span>
               </td>
             </tr>
           </table>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
             <tr>
               <td align="center" style="padding:24px 0 0 0;">
-                <h1 class="t-hero" style="margin:0 0 16px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:30px;line-height:38px;font-weight:600;color:#101010;letter-spacing:-0.4px;text-align:center;">{{HEADLINE}}</h1>
-                <p style="margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:25px;font-weight:400;color:#4A4A4A;text-align:center;">{{TEXTO_APOIO}}</p>
+                <h1 class="t-hero dm-ink" style="margin:0 0 16px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:30px;line-height:38px;font-weight:600;color:#101010;letter-spacing:-0.4px;text-align:center;">{{HEADLINE}}</h1>
+                <p class="dm-body" style="margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:25px;font-weight:400;color:#4A4A4A;text-align:center;">{{TEXTO_APOIO}}</p>
               </td>
             </tr>
           </table>

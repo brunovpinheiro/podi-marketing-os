@@ -6,9 +6,9 @@ divergindo, então esta pasta é apenas o índice.
 
 | Skill | Arquivo | O que faz |
 |---|---|---|
-| `newsletter-podi` | [`.claude/skills/newsletter-podi/SKILL.md`](../.claude/skills/newsletter-podi/SKILL.md) | Monta uma newsletter ou informativo da Podi a partir de um briefing em `projects/_inbox/<slug>/` |
-| `apresentacao-podi` | [`.claude/skills/apresentacao-podi/SKILL.md`](../.claude/skills/apresentacao-podi/SKILL.md) | Monta uma apresentação 16:9 da Podi a partir de um briefing em `projects/_inbox/<slug>/` |
-| `foto-podi` | [`.claude/skills/foto-podi/SKILL.md`](../.claude/skills/foto-podi/SKILL.md) | Escreve o prompt de uma foto de marca da Podi, seguindo o Style Lock de `brand/photography/` |
+| `newsletter-podi` | [`.claude/skills/newsletter-podi/SKILL.md`](../.claude/skills/newsletter-podi/SKILL.md) | Monta uma newsletter ou informativo do Podi a partir de um briefing em `projects/_inbox/<slug>/` |
+| `apresentacao-podi` | [`.claude/skills/apresentacao-podi/SKILL.md`](../.claude/skills/apresentacao-podi/SKILL.md) | Monta uma apresentação 16:9 do Podi a partir de um briefing em `projects/_inbox/<slug>/` |
+| `foto-podi` | [`.claude/skills/foto-podi/SKILL.md`](../.claude/skills/foto-podi/SKILL.md) | Escreve o prompt de uma foto de marca do Podi, seguindo o Style Lock de `brand/photography/` |
 
 ## Como usar
 

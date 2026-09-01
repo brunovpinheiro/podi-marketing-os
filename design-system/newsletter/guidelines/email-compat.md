@@ -100,8 +100,9 @@ Tamanhos e papéis exatos: [`../tokens.md`](../tokens.md).
 
 ## Conteúdo e entregabilidade
 
-- Rodapé sempre com: razão social + endereço, motivo do recebimento, link de descadastro
-  (frente cliente), Política de Privacidade e Termos.
+- Rodapé sempre com: `© <ano> - Podi App`, motivo do recebimento, link de descadastro
+  (frente cliente), Política de Privacidade e Termos de Uso — os dois últimos com as URLs
+  oficiais de `brand/links-oficiais.md`.
 - Sem `<form>`, `<script>`, `<iframe>`, `<video>`, `<embed>`, `<object>`.
 - Sem tracking pixel inventado — usar só o que a ferramenta de envio injeta.
 - Peso do HTML final < **100 KB** (o Gmail corta acima disso e mostra "[Mensagem truncada]").

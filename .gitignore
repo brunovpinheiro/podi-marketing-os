@@ -28,3 +28,9 @@ saida/*
 projects/_inbox/*
 !projects/_inbox/.gitkeep
 *.zip
+
+# Configuração local do maintainer (credenciais de FTP) — nunca versionar
+config.json
+
+# Ferramentas locais do maintainer — não fazem parte do padrão
+local/

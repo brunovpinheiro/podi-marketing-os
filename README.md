@@ -1,13 +1,13 @@
 # Podi Marketing OS
 
-O lugar onde ficam guardados os **padrões oficiais da Podi** para criação de materiais de
+O lugar onde ficam guardados os **padrões oficiais do Podi** para criação de materiais de
 Marketing, Design e Publicidade — cores, componentes, modelos e as instruções que a IA
 segue para montar tudo isso.
 
 A ideia é simples: você traz o conteúdo, a IA monta o material já dentro do padrão da
 marca. Ninguém precisa lembrar de cor, tamanho de fonte ou regra de rodapé.
 
-> **Marca única.** Hoje o repositório está configurado só para a Podi. Quando o design
+> **Marca única.** Hoje o repositório está configurado só para o Podi. Quando o design
 > estiver aprovado, ele será duplicado e a paleta trocada para Optimall — a estrutura e as
 > regras continuam idênticas.
 
@@ -15,7 +15,7 @@ marca. Ninguém precisa lembrar de cor, tamanho de fonte ou regra de rodapé.
 
 ## Para quem é
 
-Para o time de Marketing, Design e Publicidade da Podi.
+Para o time de Marketing, Design e Publicidade do Podi.
 
 **Não é preciso saber programar.** Você escreve o conteúdo e organiza as imagens; a IA faz
 o resto. Se em algum momento uma resposta pedir que você mexa no repositório, algo saiu do
@@ -67,7 +67,7 @@ teste pela própria ferramenta de envio.
 ## Como o projeto está organizado
 
 ```
-brand/               A identidade da Podi: logo, cores, tom de voz, links oficiais
+brand/               A identidade do Podi: logo, cores, tom de voz, links oficiais
 design-system/       Como cada tipo de material se constrói: cores, componentes, regras
 templates/           Os modelos em branco
 examples/            Materiais prontos, para ver como fica
@@ -84,7 +84,7 @@ Mapa detalhado: [`docs/estrutura.md`](docs/estrutura.md).
 ## O que é oficial
 
 Tudo em **`brand/`, `design-system/`, `templates/`, `examples/`, `docs/` e as skills** é
-recurso oficial da Podi. É o padrão da marca.
+recurso oficial do Podi. É o padrão da marca.
 
 **`projects/_inbox/` e `saida/` são seus.** Ficam no seu computador, não vão para lugar
 nenhum e não afetam ninguém.

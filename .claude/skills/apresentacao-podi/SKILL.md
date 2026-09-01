@@ -1,6 +1,6 @@
 ---
 name: apresentacao-podi
-description: Monta uma apresentação, deck ou slide da Podi em 16:9 a partir de um briefing em projects/_inbox/<slug>/, seguindo o design system de apresentação. Use quando pedirem para gerar, montar ou criar uma apresentação, um deck, um pitch, um slide ou um PowerPoint da Podi.
+description: Monta uma apresentação, deck ou slide do Podi em 16:9 a partir de um briefing em projects/_inbox/<slug>/, seguindo o design system de apresentação. Use quando pedirem para gerar, montar ou criar uma apresentação, um deck, um pitch, um slide ou um PowerPoint do Podi.
 ---
 
 # Montar uma apresentação Podi

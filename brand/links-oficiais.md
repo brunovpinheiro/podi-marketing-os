@@ -13,6 +13,19 @@ Vale para qualquer rótulo ("Baixar o app", "Baixar o app Podi", "Baixe agora") 
 **as duas metades do botão**: o `href` do `<v:roundrect>` do MSO **e** o `href` do `<a>`.
 Nunca `podi.com.br/app` — esse endereço não existe.
 
+## Rodapé legal
+
+Linha de copyright, sem razão social e sem endereço:
+
+```
+© <ano> - Podi App
+```
+
+| Documento | URL |
+|---|---|
+| Política de Privacidade | `https://www.podiapp.com.br/politica-privacidade/` |
+| Termos de Uso | `https://www.podiapp.com.br/termos-de-uso.html` |
+
 ## Redes sociais
 
 Já fixas em `design-system/newsletter/components/90-social.html`.

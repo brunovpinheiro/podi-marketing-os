@@ -1,6 +1,6 @@
 ---
 name: foto-podi
-description: Escreve o prompt de uma foto de marca da Podi a partir de um pedido em português — hero de site, banner, imagem de campanha, detalhe de app. Use quando pedirem uma foto, uma imagem de marca, um prompt de imagem ou uma geração de foto para peça da Podi.
+description: Escreve o prompt de uma foto de marca do Podi a partir de um pedido em português — hero de site, banner, imagem de campanha, detalhe de app. Use quando pedirem uma foto, uma imagem de marca, um prompt de imagem ou uma geração de foto para peça do Podi.
 ---
 
 # Escrever o prompt de uma foto Podi
@@ -79,7 +79,7 @@ dele** e ajuste sujeito e cenário — não escreva do zero. Diga de qual varia�
 
 O prompt sai **em inglês** — os geradores respondem muito melhor. A conversa é em português.
 
-O verde da Podi é `#48DB84` e já está traduzido no Style Lock como `vivid emerald green` /
+O verde do Podi é `#48DB84` e já está traduzido no Style Lock como `vivid emerald green` /
 `deep pine green` / `soft mint green`. **Não invente outro termo de cor e não escreva o hex
 dentro do prompt** — gerador não entende hexadecimal.
 

@@ -12,6 +12,10 @@ a identidade. Ver `docs/governanca.md`.
 **Podi** — app e comunicação dos shoppings. Assinatura conjunta com **Tacla Labs** no
 topo de toda peça (logo Podi à esquerda, Tacla Labs à direita).
 
+**A marca é masculina.** Escreva sempre **o Podi**, **do Podi**, **no Podi**, **pelo Podi**.
+Nunca "a Podi", "da Podi", "na Podi". Vale em qualquer material — newsletter, apresentação,
+copy de campanha — e na conversa com o time.
+
 Logos oficiais em `brand/assets/header/`. Na **assinatura conjunta**, sempre a versão light
 mode (arte escura sobre fundo claro): o "Tacla" do logo é preto, então em fundo escuro a
 assinatura vai dentro de uma placa branca — nunca se troca o arquivo por CSS.
@@ -32,7 +36,7 @@ como o ícone social verde do rodapé do e-mail, é ornamento, não alvo de leit
 identifica a peça é a forma do logo, não o contraste dele.
 
 **Logo não é texto.** A regra de contraste do verde governa palavras; o logo é uma marca
-gráfica, e branco sobre o verde é como a Podi assina desde sempre. O que continua proibido
+gráfica, e branco sobre o verde é como o Podi assina desde sempre. O que continua proibido
 é **recolorir por filtro ou por efeito** — trocar a cor é trocar o `color` do SVG, e ponto.
 
 ## Cor de marca — e a regra que ela impõe
@@ -80,7 +84,7 @@ Mesma marca, mesma paleta. O que muda é público, tom e obrigação legal.
 | Público | Consumidor dos shoppings, usuário do app | Colaboradores Podi |
 | Objetivo | Promoções, eventos, novidades do app, aniversariantes | Cases de uso, resultados, bastidores |
 | Tom | Direto, aspiracional, 1 CTA por bloco | Próximo, celebratório, foco em pessoas |
-| Rodapé | Completo: razão social, endereço, motivo do recebimento, **descadastro**, privacidade e termos | Contato de comunicação interna / RH; sem descadastro |
+| Rodapé | Completo: `© <ano> - Podi App`, motivo do recebimento, **descadastro**, privacidade e termos | Contato de comunicação interna / RH; sem descadastro |
 
 **A diferença que não pode errar:** material para cliente final sem link de descadastro
 é problema de entregabilidade e de LGPD.
