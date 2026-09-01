@@ -1,0 +1,38 @@
+<!-- ============================================================================
+     12 · CARD DE NOTÍCIA COMPACTA — miniatura estreita à esquerda + título + texto.
+     Para listas de melhorias/changelog.
+
+     IMAGEM SEMPRE 1:1 — 160x160 no desktop, 88x88 no mobile. Exportar 320x320.
+     As classes .thumb / .thumb-cell / .thumb-gap fazem a redução no mobile.
+     O arquivo já tem que vir quadrado: e-mail não recorta imagem. Um arquivo fora do
+     quadrado vai distorcer ou estourar a coluna. Se a arte original for vertical
+     (print de celular), recortar num quadrado antes de exportar.
+
+     EXCEÇÃO DELIBERADA à regra de empilhar colunas no mobile:
+     a miniatura cai para 88px no mobile, então as duas colunas continuam lado a lado
+     até 320px (sobram ~144px para o texto). Empilhar deixaria a miniatura ocupando a largura
+     inteira, o que quebra o ritmo da lista.
+     Por isso NÃO usar a classe .stack aqui.
+     ============================================================================ -->
+<tr>
+  <td class="p-mobile" style="padding:0 32px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" class="dm-surface" style="width:100%;background-color:#FFFFFF;border-radius:20px;">
+      <tr>
+        <td class="card-mobile" style="padding:24px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
+            <tr>
+              <td width="160" valign="middle" class="thumb-cell" style="width:160px;">
+                <img src="{{URL_IMAGEM}}" width="160" height="160" alt="{{ALT}}" class="thumb" style="display:block;border:0;outline:none;text-decoration:none;width:160px;max-width:160px;height:160px;border-radius:12px;" />
+              </td>
+              <td width="20" class="thumb-gap" style="width:20px;font-size:0;line-height:0;">&nbsp;</td>
+              <td valign="middle" style="padding:0;">
+                <h3 class="dm-ink" style="margin:0 0 6px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:23px;font-weight:600;color:#101010;letter-spacing:-0.1px;">{{TITULO}}</h3>
+                <p class="dm-body" style="margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:22px;font-weight:400;color:#4A4A4A;">{{TEXTO}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

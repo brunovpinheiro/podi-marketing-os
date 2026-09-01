@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# Python
+.venv/
+.venv-*/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Editores
+.vscode/
+.idea/
+
+# Newsletters montadas — trabalho local, não versionado
+saida/*
+!saida/README.md
+
+# Briefings recebidos — material bruto do time, não versionado
+projects/_inbox/*
+!projects/_inbox/.gitkeep
+*.zip

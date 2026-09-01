@@ -1,0 +1,166 @@
+# Podi Marketing OS
+
+Repositório interno de referência para criação de materiais de Marketing, Design e
+Publicidade da **Podi**. Guarda os recursos **oficiais** da marca — brand, design system,
+templates, skills — para que qualquer pessoa do time produza material com IA sem
+reinventar o padrão.
+
+Hoje o único material coberto é **newsletter / e-mail**. A estrutura já prevê outros.
+
+Este arquivo é a **camada global**. Ele não substitui as skills: instruções específicas
+de um material vivem na skill daquele material.
+
+---
+
+## 0. Com quem você está falando
+
+Quem usa este repositório **escreve material de marketing, não código**. Não sabe o que é
+commit, branch, pull request ou terminal — e não precisa saber para fazer o trabalho bem feito.
+
+- **Nunca peça para ela rodar comando de Git.** Nada de `git pull`, `git add`, `git commit`,
+  `git push`, "abre um PR", "cria uma branch". Se o repositório precisar ser atualizado,
+  **você atualiza** com `./scripts/check-atualizacao.sh --atualizar` e diz em português o
+  que aconteceu: *"atualizei o padrão para a versão mais recente"*.
+- **Nunca sugira versionar, commitar ou publicar** o que foi montado. O material nasce em
+  `saida/`, que é pasta local — o trabalho dela termina ali.
+- **Nunca proponha `git init`, configurar remoto ou manutenção do repositório.** Isso é do
+  maintainer.
+- Se algo só puder ser resolvido mexendo no repositório, a saída é sempre a mesma:
+  *"avise quem cuida do repositório"*. Não ensine o procedimento.
+
+Vocabulário: fale em **pasta**, **arquivo**, **imagem**, **texto**, **versão do padrão**.
+Não fale em repositório, clone, HEAD, diff, merge nem caminho absoluto.
+
+Erro de execução também é tradução sua: em vez de colar o stderr, diga o que a pessoa
+precisa fazer — *"a imagem 03 está em pé, precisa ser quadrada"* em vez de
+*"aspect ratio mismatch: 0.56"*.
+
+Isto vale para a conversa. Nos arquivos que você escreve, as regras técnicas valem
+integralmente.
+
+---
+
+## 1. Estrutura
+
+```
+brand/                       Identidade Podi. A camada mais alta — nada a contradiz.
+design-system/<material>/    Tokens, componentes, guidelines e QA de cada material.
+templates/<material>/        Shells canônicos. NUNCA editar por campanha.
+.claude/skills/<skill>/      Skills oficiais — o procedimento que a IA segue.
+examples/<material>/         Acervo curado de referência. Só o maintainer grava aqui.
+projects/_inbox/<slug>/      ENTRADA: briefing + imagens do time. Local, fora do Git.
+saida/<slug>/                SAÍDA: o material montado. Local, fora do Git.
+docs/                        Guias para humanos: governança, estrutura, como enviar conteúdo.
+scripts/                     Utilitários (checagem de cópia desatualizada).
+CHANGELOG.md                 Mudanças no padrão. Atualizar ao mexer em recurso oficial.
+```
+
+Mapa comentado: `docs/estrutura.md`.
+
+---
+
+## 2. Hierarquia de autoridade
+
+```
+Brand Guidelines          brand/
+        ↓
+Design System             design-system/<material>/
+        ↓
+Templates                 templates/<material>/
+        ↓
+Skills                    .claude/skills/<skill>/SKILL.md
+        ↓
+Projeto / pedido do usuário
+```
+
+**Em conflito, a camada superior prevalece.**
+
+Se o usuário pedir algo que contraria uma camada acima — outra cor, texto branco sobre o
+verde da marca, outro logo — **sinalize o conflito** em vez de alterar a identidade.
+Explique a regra em uma frase, em português comum, e ofereça a alternativa que respeita o
+sistema. Se a pessoa reafirmar depois disso, é decisão dela: diga que a peça sai fora do
+padrão e siga.
+
+---
+
+## 3. Regras não negociáveis
+
+Estão detalhadas nas camadas certas, mas ficam repetidas aqui porque errar nelas custa caro:
+
+- **Cor de marca `#48DB84` nunca é cor de texto.** Só fundo. Texto em cima dela é `#101010`
+  — **nunca branco**. Link de marca sobre branco é `#0C6E3B`; no dark mode, `#6FE9A2`.
+  (`brand/README.md`)
+- **Nunca escreva cor solta.** Toda cor sai dos tokens do material.
+- **Material para cliente final precisa de link de descadastro.** Sem ele é problema de
+  entregabilidade e de LGPD. (`brand/README.md`)
+- **Link do app é sempre `https://podi.podiapp.com.br/podi-e931a`.** Nunca `podi.com.br/app`.
+  (`brand/links-oficiais.md`)
+- **Newsletter é HTML de e-mail, não de site.** Só tabelas, CSS inline, sem flex/grid/var().
+  (`design-system/newsletter/guidelines/email-compat.md`)
+
+---
+
+## 4. Governança — o que você pode e não pode alterar
+
+**Oficial** é tudo em `brand/`, `design-system/`, `templates/`, `.claude/skills/`,
+`examples/` e `docs/`. Só o maintainer altera.
+
+| | |
+|---|---|
+| **Pode** criar/alterar | `saida/<slug>/` — o material montado. É onde todo trabalho acontece. |
+| **Não** pode alterar | `brand/`, `design-system/`, `templates/`, `.claude/skills/`, `examples/`, `docs/`, `CHANGELOG.md` — a menos que o maintainer peça explicitamente essa alteração |
+
+Uma campanha específica **nunca** altera o design system. Se ela precisa de algo novo,
+isso é uma **proposta de evolução do sistema**, não uma edição.
+
+Detalhes: `docs/governanca.md`.
+
+---
+
+## 5. Quando algo não existe no sistema
+
+**Não invente padrão.**
+
+1. **Identifique a ausência** e diga qual é.
+2. **Não crie arbitrariamente** — nada de cor nova, bloco improvisado ou regra inventada.
+3. Verifique se um recurso existente resolve.
+4. Se for realmente necessário para executar a tarefa, **proponha** uma solução.
+5. **Marque claramente como proposta.** Monte o resto do material e relate a proposta no fim.
+6. **Proposta não vira padrão automaticamente.** Quem decide é o maintainer.
+
+---
+
+## 6. Como usar cada camada
+
+**Skills.** Ao receber um pedido de material, use a skill correspondente — ela tem o
+procedimento completo. Newsletter → `/newsletter`. Índice em `skills/README.md`.
+
+**Design System.** Antes de escrever qualquer valor visual, consulte
+`design-system/<material>/tokens.md`. Componentes se **copiam**, não se editam no lugar.
+
+**Templates.** Copie o shell para `saida/<slug>/` e monte lá. Nunca edite o template
+original por campanha.
+
+**Exemplos.** `examples/<material>/` mostra o resultado esperado. É leitura, não destino
+de escrita — nunca grave lá.
+
+---
+
+## 7. Ao mexer no padrão (só maintainer)
+
+Qualquer mudança em `brand/`, `design-system/`, `templates/`, `.claude/skills/` ou nas
+regras deste arquivo entra no `CHANGELOG.md` na mesma leva — data, o que mudou e **por quê**.
+Se a mudança exigir revisar algo já montado, marcar `**Ação necessária:**`.
+
+É o que o time lê para saber o que perdeu, e o que a skill mostra quando detecta uma cópia
+atrasada. Changelog não escrito na hora não é escrito nunca.
+
+---
+
+## 8. Ao terminar um material
+
+Sempre reportar: caminho do arquivo, o que foi usado do sistema, o que precisa ser
+hospedado (com dimensões), e o que do briefing **não coube no padrão** — dizendo
+explicitamente o que ficou de fora e por quê.
+
+A skill do material define o resto do formato de entrega.

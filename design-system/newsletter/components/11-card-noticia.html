@@ -1,0 +1,41 @@
+<!-- ============================================================================
+     11 · CARD DE NOTÍCIA — imagem no topo (flush) + tag + título + texto.
+     É o bloco principal de newsletter de produto/atualizações.
+     Imagem: 536x300 exibida (exportar 1072x600).
+     O raio superior da imagem some no Outlook Windows — degradação aceita.
+     A linha {{SUBTITULO}} é opcional — remover a <tr> inteira se não houver.
+     ============================================================================ -->
+<tr>
+  <td class="p-mobile" style="padding:0 32px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" class="dm-surface" style="width:100%;background-color:#FFFFFF;border-radius:20px;">
+      <tr>
+        <td style="padding:0;font-size:0;line-height:0;">
+          <img src="{{URL_IMAGEM}}" width="536" alt="{{ALT}}" style="display:block;border:0;outline:none;text-decoration:none;width:100%;max-width:536px;height:auto;border-radius:20px 20px 0 0;" />
+        </td>
+      </tr>
+      <tr>
+        <td class="card-mobile" style="padding:24px 28px 28px 28px;">
+
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left">
+            <tr>
+              <td align="center" bgcolor="#D4F0DF" class="dm-tag" style="border-radius:100px;padding:6px 12px;">
+                <span class="dm-accent" style="font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;line-height:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0C6E3B;">{{TAG}}</span>
+              </td>
+            </tr>
+          </table>
+
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
+            <tr>
+              <td style="padding:16px 0 0 0;">
+                <h3 class="t-h3 dm-ink" style="margin:0 0 6px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:20px;line-height:26px;font-weight:600;color:#101010;letter-spacing:-0.2px;">{{TITULO}}</h3>
+                <p class="dm-accent" style="margin:0 0 10px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:22px;font-weight:600;color:#0C6E3B;">{{SUBTITULO}}</p>
+                <p class="dm-body" style="margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:23px;font-weight:400;color:#4A4A4A;">{{TEXTO}}</p>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

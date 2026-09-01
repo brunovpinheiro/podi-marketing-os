@@ -1,0 +1,60 @@
+<!-- ============================================================================
+     07 · ARTIGOS ALTERNADOS (padrão ref-variacao-artigos)
+     Duas linhas: A = imagem à esquerda · B = imagem à direita (via dir="rtl").
+     Imagem: 248x248 exibida (exportar 496x496). Texto: 3 linhas no máximo.
+     No mobile as duas linhas empilham com a IMAGEM SEMPRE ACIMA do texto.
+     Para mais itens, repetir o par A/B. Máximo recomendado: 4 itens.
+     ============================================================================ -->
+
+<!-- 07A · imagem à esquerda -->
+<tr>
+  <td class="p-mobile" style="padding:0 32px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
+      <tr>
+        <td class="stack" width="248" valign="top" style="width:248px;">
+          <img src="{{URL_IMAGEM_A}}" width="248" alt="{{ALT_A}}" style="display:block;border:0;outline:none;text-decoration:none;width:100%;max-width:248px;height:auto;border-radius:14px;" />
+        </td>
+        <td class="hide-mobile" width="24" style="width:24px;font-size:0;line-height:0;">&nbsp;</td>
+        <td class="stack center-mobile" valign="middle" style="padding:0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
+            <tr><td height="16" class="hide-mobile" style="height:0;line-height:0;font-size:0;">&nbsp;</td></tr>
+            <tr>
+              <td style="padding:20px 0 0 0;">
+                <h3 class="t-h3 dm-ink" style="margin:0 0 8px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:20px;line-height:26px;font-weight:600;color:#101010;letter-spacing:-0.2px;">{{TITULO_A}}</h3>
+                <p class="dm-body" style="margin:0 0 16px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:23px;font-weight:400;color:#4A4A4A;">{{TEXTO_A}}</p>
+                <a href="{{URL_A}}" target="_blank" class="dm-accent" style="font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;font-weight:600;color:#0C6E3B;text-decoration:none;">{{LABEL_A}} &rarr;</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr><td height="40" class="h-mobile" style="height:40px;line-height:40px;font-size:0;mso-line-height-rule:exactly;">&nbsp;</td></tr>
+
+<!-- 07B · imagem à direita (dir="rtl" inverte no desktop e mantém a imagem no topo no mobile) -->
+<tr>
+  <td class="p-mobile" style="padding:0 32px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" dir="rtl" style="width:100%;">
+      <tr>
+        <td class="stack" width="248" valign="top" dir="ltr" style="width:248px;">
+          <img src="{{URL_IMAGEM_B}}" width="248" alt="{{ALT_B}}" style="display:block;border:0;outline:none;text-decoration:none;width:100%;max-width:248px;height:auto;border-radius:14px;" />
+        </td>
+        <td class="hide-mobile" width="24" dir="ltr" style="width:24px;font-size:0;line-height:0;">&nbsp;</td>
+        <td class="stack center-mobile" valign="middle" dir="ltr" style="padding:0;text-align:left;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" dir="ltr" style="width:100%;">
+            <tr>
+              <td style="padding:20px 0 0 0;">
+                <h3 class="t-h3 dm-ink" style="margin:0 0 8px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:20px;line-height:26px;font-weight:600;color:#101010;letter-spacing:-0.2px;">{{TITULO_B}}</h3>
+                <p class="dm-body" style="margin:0 0 16px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:23px;font-weight:400;color:#4A4A4A;">{{TEXTO_B}}</p>
+                <a href="{{URL_B}}" target="_blank" class="dm-accent" style="font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;font-weight:600;color:#0C6E3B;text-decoration:none;">{{LABEL_B}} &rarr;</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

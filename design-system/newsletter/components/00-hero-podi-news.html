@@ -1,0 +1,73 @@
+<!-- ============================================================================
+     00 · HERO PODI NEWS — header combinado, obrigatório nas edições do Podi News.
+     Figma: Podi-News-26-27, node 1:422 (hero-podi-news).
+
+     Substitui o conjunto 01-header + 02a-eyebrow + 02-hero-title + 03-hero-image:
+     aqui os quatro vivem DENTRO de um único card branco de raio 20px —
+     topbar de logos (88px) · imagem 536x301 flush · eyebrow + headline + apoio.
+
+     Em newsletter que NÃO é Podi News, continuar usando 01-header.
+
+     DARK MODE — o card inteiro leva .dm-logo e permanece BRANCO: o "Tacla" do logo
+     é preto e sumiria sobre card escuro. Por isso o texto aqui dentro NÃO leva
+     .dm-ink / .dm-body / .dm-tag — as classes clareariam o texto sobre fundo branco.
+     Esta é a única seção do repo onde o texto fica sem classe de dark mode.
+
+     Imagens: podi 96x48 (exportar 192x96) · tacla labs 167x24 (exportar 334x48)
+              hero 536x301 (exportar 1072x602).
+     ============================================================================ -->
+<tr>
+  <td class="p-mobile" style="padding:28px 32px 0 32px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" class="dm-logo" style="width:100%;background-color:#FFFFFF;border-radius:20px;">
+
+      <!-- topbar: logos -->
+      <tr>
+        <td style="padding:0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
+            <tr>
+              <td align="left" valign="middle" class="p-logo" style="padding:20px 28px;">
+                <a href="https://podi.com.br" target="_blank" style="text-decoration:none;">
+                  <img src="../../brand/assets/header/logo-podi-transparente.png" width="96" height="48" alt="Podi" style="display:block;border:0;outline:none;text-decoration:none;width:96px;height:48px;" />
+                </a>
+              </td>
+              <td align="right" valign="middle" class="p-logo" style="padding:20px 28px;">
+                <a href="https://taclalabs.com.br" target="_blank" style="text-decoration:none;">
+                  <img src="../../brand/assets/header/logo-tacla-labs.png" width="167" height="24" alt="Tacla Labs" class="logo-tacla" style="display:block;border:0;outline:none;text-decoration:none;width:167px;height:24px;" />
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- imagem da edição: flush, sem raio (fica no meio do card) -->
+      <tr>
+        <td style="padding:0;font-size:0;line-height:0;">
+          <img src="{{URL_IMAGEM}}" width="536" alt="{{ALT}}" style="display:block;border:0;outline:none;text-decoration:none;width:100%;max-width:536px;height:auto;" />
+        </td>
+      </tr>
+
+      <!-- eyebrow + headline + texto de apoio -->
+      <tr>
+        <td align="center" class="card-mobile" style="padding:28px 29px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+            <tr>
+              <td align="center" bgcolor="#D4F0DF" style="border-radius:100px;padding:7px 14px;">
+                <span style="font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0C6E3B;">{{EYEBROW}}</span>
+              </td>
+            </tr>
+          </table>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;">
+            <tr>
+              <td align="center" style="padding:24px 0 0 0;">
+                <h1 class="t-hero" style="margin:0 0 16px 0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:30px;line-height:38px;font-weight:600;color:#101010;letter-spacing:-0.4px;text-align:center;">{{HEADLINE}}</h1>
+                <p style="margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:25px;font-weight:400;color:#4A4A4A;text-align:center;">{{TEXTO_APOIO}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+    </table>
+  </td>
+</tr>
