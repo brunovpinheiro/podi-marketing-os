@@ -45,6 +45,15 @@ Mesma marca, mesma paleta. O que muda é público, tom e obrigação legal.
 **A diferença que não pode errar:** material para cliente final sem link de descadastro
 é problema de entregabilidade e de LGPD.
 
+## Fotografia
+
+Direção fotográfica oficial: [`photography/STYLE-LOCK-PODI.md`](photography/STYLE-LOCK-PODI.md).
+Vale para qualquer foto de marca, em qualquer material. O bloco `STYLE LOCK` se copia sem
+editar uma palavra — é ele que faz as imagens parecerem do mesmo ensaio.
+
+Lá o verde é figurino e objeto dentro da foto, não texto: a regra de contraste acima
+continua valendo integralmente.
+
 ## Ativos e links fixos
 
 Ver `brand/links-oficiais.md`. Não se inventa URL, não se cria arte nova para o que já tem.

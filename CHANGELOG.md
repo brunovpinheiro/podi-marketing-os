@@ -3,10 +3,81 @@
 Mudanças no padrão — templates, tokens, regras e assets fixos.
 
 Mantido pelo dono do repositório. Quem escreve newsletter lê para saber o que mudou
-desde o último envio; o `/nova-newsletter` avisa quando o clone está atrás.
+desde o último envio; as skills avisam quando o clone está atrás.
 
 **Ação necessária** marca o que exige refazer ou revisar algo já montado. O resto
 entra sozinho no próximo e-mail.
+
+---
+
+## 2026-09-01 — skill de foto e sufixo `-podi`
+
+### Adicionado
+
+- **Skill `/foto-podi`** — escreve o prompt de uma foto de marca a partir de um pedido em
+  português: enquadra o pedido nas dimensões obrigatórias, parte de uma das 8 variações
+  prontas quando cabe, monta o prompt em inglês com o bloco `STYLE LOCK` copiado sem edição,
+  roda o checklist e entrega as duas versões (com e sem campo de negative). Fecha a lacuna
+  aberta na entrada anterior: `brand/photography/` dizia **o que é permitido**, e não havia
+  nada dizendo **como executar**.
+  A skill **referencia** o Style Lock; não copia trechos dele. Direção visual continua tendo
+  uma fonte só.
+- **`saida/fotos/NNN-slug.md`** — onde os prompts entregues ficam guardados. É o histórico do
+  ensaio: dá para repetir uma foto meses depois e reaproveitar a seed. Como todo `saida/`,
+  é local e fora do Git.
+
+### Alterado
+
+- **Toda skill oficial passa a terminar em `-podi`.** `/newsletter` virou **`/newsletter-podi`**;
+  a skill nova já nasceu `/foto-podi`. A ferramenta de IA traz dezenas de comandos próprios —
+  sem o sufixo, na hora de digitar não dá para saber qual é o padrão da marca.
+  **Ação necessária:** quem já usava `/newsletter` passa a digitar `/newsletter-podi`. O
+  material montado antes não muda em nada.
+- **`skills/README.md`, `README.md`, `projects/README.md`, `docs/como-enviar-conteudo.md`,
+  `docs/estrutura.md`, `CLAUDE.md` e `scripts/check-atualizacao.sh`** atualizados com o nome
+  novo e com a regra do sufixo escrita, para skill nova já nascer certa.
+- **`saida/README.md`** deixou de falar só em newsletter: agora a pasta recebe dois tipos de
+  saída.
+- **`brand/photography/README.md`** — a seção "o que ainda não existe" virou o ponteiro para
+  a `/foto-podi`.
+
+---
+
+## 2026-09-01 — direção fotográfica
+
+### Adicionado
+
+- **`brand/photography/`** — a direção fotográfica da Podi passa a ser diretriz oficial de
+  Brand, no mesmo nível da cor e do logo. Contém o `STYLE-LOCK-PODI.md` migrado íntegro do
+  repositório de fotografia, as 5 referências que o originaram e um `README.md` dizendo o
+  que ali é normativo (DNA, tradução para interior, blocos STYLE LOCK, checklist, verde) e
+  o que é ferramenta de execução (fórmula de slots, suíte de prompts, negative por gerador).
+  Está em `brand/` e não em `design-system/` porque vale para qualquer material — e-mail,
+  post, impresso —, não só para e-mail.
+- **Regra não negociável no `CLAUDE.md`** — não se inventa direção visual nova, e o bloco
+  `STYLE LOCK` se copia sem editar uma palavra. Parafrasear o bloco é o erro que ninguém
+  percebe até ter quarenta imagens desalinhadas entre si.
+
+### Alterado
+
+- **O verde da fotografia ficou decidido: `#48DB84`.** O Style Lock vinha operando com o hex
+  oficial "a confirmar" — o Marketing OS já o tinha. Os termos `vivid emerald green` /
+  `deep pine green` / `soft mint green` ficam confirmados como a tradução desse verde para o
+  vocabulário dos geradores; as variantes lime e jade continuam no §8 só como registro do que
+  foi descartado.
+- **Skill `/newsletter`** passou a apontar o Style Lock para o caso de o briefing pedir uma
+  **foto que ainda não existe**. As imagens que chegam em `_inbox/` **não** ganharam critério
+  de aceite fotográfico: muitas são print de tela ou montagem gráfica, e para elas o critério
+  continua sendo só formato e proporção.
+- **`brand/README.md` e `docs/estrutura.md`** ganharam a seção e a linha correspondentes.
+
+### O que ficou de fora, de propósito
+
+- O `CLAUDE.md` do repositório de origem. Ele é o manual de uma fábrica de prompts — formato
+  de entrega, numeração de arquivo, `--sref`/`--seed`/`--cref`. Isso é procedimento de skill,
+  não Brand, e colide com a linguagem não técnica deste repositório.
+- A pasta `prompts/` de origem: é saída de projeto, equivalente ao `saida/` daqui.
+- Uma skill `/foto`. É **proposta**, registrada no `brand/photography/README.md` — não padrão.
 
 ---
 

@@ -129,7 +129,7 @@ leitor vê um quadrado vazio. Se saiu do iPhone em HEIC, exporte como JPG antes.
 Abra o Claude Code na pasta do projeto e escreva:
 
 ```
-/newsletter 2026-09-cliente-podi-news
+/newsletter-podi 2026-09-cliente-podi-news
 ```
 
 Ou, em português mesmo:

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Verifica se o clone local está atrás do repositório remoto.
 #
-# Rodado pelo /newsletter antes de montar qualquer coisa: como a pasta saida/
+# Rodado pelas skills -podi antes de montar qualquer coisa: como a pasta saida/
 # fica fora do Git, quem só escreve newsletter nunca tem motivo para tocar no
 # repositório — e um clone parado há meses monta e-mail com template velho, sem
 # nenhum sinal visível de que está errado.

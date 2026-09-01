@@ -44,6 +44,7 @@ integralmente.
 
 ```
 brand/                       Identidade Podi. A camada mais alta — nada a contradiz.
+brand/photography/           Direção fotográfica oficial (Style Lock). Também é Brand.
 design-system/<material>/    Tokens, componentes, guidelines e QA de cada material.
 templates/<material>/        Shells canônicos. NUNCA editar por campanha.
 .claude/skills/<skill>/      Skills oficiais — o procedimento que a IA segue.
@@ -62,7 +63,7 @@ Mapa comentado: `docs/estrutura.md`.
 ## 2. Hierarquia de autoridade
 
 ```
-Brand Guidelines          brand/
+Brand Guidelines          brand/  (inclui brand/photography/STYLE-LOCK-PODI.md)
         ↓
 Design System             design-system/<material>/
         ↓
@@ -95,6 +96,8 @@ Estão detalhadas nas camadas certas, mas ficam repetidas aqui porque errar nela
   entregabilidade e de LGPD. (`brand/README.md`)
 - **Link do app é sempre `https://podi.podiapp.com.br/podi-e931a`.** Nunca `podi.com.br/app`.
   (`brand/links-oficiais.md`)
+- **Fotografia da Podi segue `brand/photography/STYLE-LOCK-PODI.md`.** Não se inventa direção
+  visual nova, e o bloco `STYLE LOCK` se copia sem editar uma palavra.
 - **Newsletter é HTML de e-mail, não de site.** Só tabelas, CSS inline, sem flex/grid/var().
   (`design-system/newsletter/guidelines/email-compat.md`)
 
@@ -133,13 +136,21 @@ Detalhes: `docs/governanca.md`.
 ## 6. Como usar cada camada
 
 **Skills.** Ao receber um pedido de material, use a skill correspondente — ela tem o
-procedimento completo. Newsletter → `/newsletter`. Índice em `skills/README.md`.
+procedimento completo. Newsletter → `/newsletter-podi`. Foto de marca → `/foto-podi`.
+Índice em `skills/README.md`.
+
+Toda skill oficial termina em `-podi`. É o que diferencia o padrão da marca de qualquer
+outro comando disponível na ferramenta.
 
 **Design System.** Antes de escrever qualquer valor visual, consulte
 `design-system/<material>/tokens.md`. Componentes se **copiam**, não se editam no lugar.
 
 **Templates.** Copie o shell para `saida/<slug>/` e monte lá. Nunca edite o template
 original por campanha.
+
+**Fotografia.** Toda imagem fotográfica de marca — gerada por IA ou dirigida em produção —
+obedece a `brand/photography/STYLE-LOCK-PODI.md`. É Brand, não design system: vale para
+qualquer material. Não vale para print de tela, montagem gráfica ou ilustração.
 
 **Exemplos.** `examples/<material>/` mostra o resultado esperado. É leitura, não destino
 de escrita — nunca grave lá.

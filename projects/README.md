@@ -37,7 +37,7 @@ Exemplos: `2026-09-cliente-dia-das-criancas`, `2026-09-interno-case-shopping-nor
 ## Como pedir a montagem
 
 ```
-/newsletter 2026-09-cliente-dia-das-criancas
+/newsletter-podi 2026-09-cliente-dia-das-criancas
 ```
 
 ou, em português mesmo:

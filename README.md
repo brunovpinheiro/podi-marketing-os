@@ -41,7 +41,7 @@ antes do primeiro envio, ele explica como nomear as imagens.
 **2. Peça a montagem.** Dentro do repositório:
 
 ```
-/newsletter 2026-09-cliente-podi-news
+/newsletter-podi 2026-09-cliente-podi-news
 ```
 
 Ou simplesmente, em português:

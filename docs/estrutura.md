@@ -6,6 +6,10 @@ Mapa comentado. Visão para quem usa está no [README](../README.md).
 brand/                                   IDENTIDADE — camada mais alta
 ├── README.md                            Marca, cor, regra de contraste, as duas frentes
 ├── links-oficiais.md                    Link do app, URLs sociais, ativos fixos
+├── photography/
+│   ├── README.md                        O que é normativo no Style Lock, e o verde
+│   ├── STYLE-LOCK-PODI.md               Direção fotográfica oficial — blocos copiados byte a byte
+│   └── refs/                            As 5 referências que originaram o Style Lock
 └── assets/
     ├── header/                          Logos Podi e Tacla Labs (versão light mode)
     ├── icones/                          Ícones sociais — 4 redes × 3 variantes
@@ -26,7 +30,8 @@ templates/newsletter/
 └── base.html                            Shell canônico. NUNCA editar por campanha
 
 .claude/
-├── skills/newsletter/SKILL.md           Skill oficial — o procedimento que a IA segue
+├── skills/newsletter-podi/SKILL.md      Skill oficial — monta o e-mail
+├── skills/foto-podi/SKILL.md            Skill oficial — escreve o prompt de foto de marca
 └── launch.json                          Config do servidor de preview local
 
 skills/README.md                         Índice das skills (elas moram em .claude/skills/)
@@ -56,6 +61,10 @@ CHANGELOG.md                             Mudanças no padrão, com o porquê
 
 ## Por que assim
 
+**Fotografia dentro de `brand/`.** Direção fotográfica é identidade, como a cor e o logo —
+vale para e-mail, post e impresso. Não virou `design-system/photography/` porque a camada de
+"como se constrói" seria uma skill de produção de imagem, que ainda não existe.
+
 **`brand/` separado de `design-system/`.** A cor de marca e a regra de contraste valem para
 qualquer material — e-mail, post, impresso. As regras de tabela e VML valem só para e-mail.
 Misturar as duas faria todo material novo herdar limitação de Outlook.
@@ -69,6 +78,9 @@ componentes do design system: se copiam para dentro do template, não são templ
 
 **`projects/` e `saida/` fora do Git.** O trabalho de cada pessoa é local. Ninguém
 sobrescreve ninguém, e material bruto não infla o histórico do repositório.
+
+**Skills com sufixo `-podi`.** A ferramenta de IA traz dezenas de comandos próprios. Sem o
+sufixo, na hora de digitar não dá para saber qual comando é o padrão da marca.
 
 **Skills em `.claude/skills/`.** É a pasta que o Claude Code descobre sozinho. Uma segunda
 cópia em `skills/` criaria duas versões divergindo — por isso `skills/` é só o índice.

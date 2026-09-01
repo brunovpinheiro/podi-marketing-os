@@ -1,5 +1,5 @@
 ---
-name: newsletter
+name: newsletter-podi
 description: Monta uma newsletter, Podi News, informativo interno ou e-mail marketing da Podi a partir de um briefing em projects/_inbox/<slug>/. Use quando pedirem para gerar, montar ou criar uma newsletter, um Podi News, um informativo interno ou um e-mail marketing a partir de um documento e uma pasta de imagens.
 ---
 
@@ -14,6 +14,7 @@ valem integralmente:
 | Camada | Onde | O que manda |
 |---|---|---|
 | Brand | `brand/README.md`, `brand/links-oficiais.md` | Identidade, contraste, frentes, links fixos |
+| Brand | `brand/photography/STYLE-LOCK-PODI.md` | Direção fotográfica — só quando a peça pedir **foto nova** |
 | Design System | `design-system/newsletter/` | Tokens, componentes, compatibilidade, ritmo, QA |
 | Template | `templates/newsletter/base.html` | O shell |
 
@@ -105,6 +106,14 @@ Se o conteúdo pede um bloco, uma cor ou um layout que não existe:
    marcada explicitamente como **proposta**: o que falta, onde seria usado, e o que você
    sugere.
 4. Proposta não vira padrão sozinha. Quem decide é o maintainer (`docs/governanca.md`).
+
+Se o briefing pedir uma **fotografia que ainda não existe**, a direção visual não se
+inventa: ela está em `brand/photography/STYLE-LOCK-PODI.md`. Relate o que falta e aponte o
+Style Lock como referência para quem for produzir a imagem.
+
+Isso vale **só para fotografia**. As imagens que chegam em `_inbox/` não passam por
+avaliação de estilo fotográfico — muitas são print de tela, montagem gráfica ou arte, e
+para elas o único critério continua sendo formato e proporção (§3).
 
 Se o pedido do usuário conflita com o brand — outra cor, texto branco sobre o verde,
 outro logo — **sinalize o conflito** em vez de alterar a identidade. Explique a regra em
