@@ -1,0 +1,24 @@
+<!-- 08-numeros — 2 a 4 números grandes. Mais que 4 e nenhum é lembrado.
+     Todo número tem label; a fonte do dado vai na legenda, nunca escondida. -->
+<style>
+.nums{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:64px;align-items:stretch}
+.nums .card{display:flex;flex-direction:column;justify-content:center;gap:16px}
+.nums .t-num{color:var(--ink)}
+.nums .regua{margin:8px 0}
+</style>
+<section class="slide">
+  <div class="slide__pad">
+    <h2 class="t-slide">{{TITULO_DO_SLIDE}}</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <div class="nums">
+      <div class="card"><span class="t-num">{{NUMERO}}</span><div class="regua"></div>
+        <span class="t-num-label">{{O_QUE_ELE_MEDE}}</span></div>
+      <div class="card"><span class="t-num">{{NUMERO}}</span><div class="regua"></div>
+        <span class="t-num-label">{{O_QUE_ELE_MEDE}}</span></div>
+      <div class="card"><span class="t-num">{{NUMERO}}</span><div class="regua"></div>
+        <span class="t-num-label">{{O_QUE_ELE_MEDE}}</span></div>
+    </div>
+    <div class="slide__foot" style="color:var(--ink)"><svg class="logo" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg>
+      <span>Fonte: {{FONTE_DO_DADO}} · {{PERIODO}}</span><span>{{NN}}</span></div>
+  </div>
+</section>

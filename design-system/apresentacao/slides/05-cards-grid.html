@@ -1,0 +1,30 @@
+<!-- 05-cards-grid — 3 ou 4 cards de peso igual, cada um com chip de ícone roxo.
+     Para 4 itens, trocar grid-template-columns para 1fr 1fr e usar duas linhas. -->
+<style>
+.grid3{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:64px}
+.grid3 .card{display:flex;flex-direction:column;gap:32px}
+</style>
+<section class="slide">
+  <div class="slide__pad">
+    <h2 class="t-slide">{{TITULO_DO_SLIDE}}</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <div class="grid3">
+      <div class="card">
+        <div class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg></div>
+        <h3 class="t-card">{{TITULO}}</h3>
+        <p class="t-body-sm">{{TEXTO_CURTO}}</p>
+      </div>
+      <div class="card">
+        <div class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="5" width="18" height="14" rx="3"/></svg></div>
+        <h3 class="t-card">{{TITULO}}</h3>
+        <p class="t-body-sm">{{TEXTO_CURTO}}</p>
+      </div>
+      <div class="card">
+        <div class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h3 class="t-card">{{TITULO}}</h3>
+        <p class="t-body-sm">{{TEXTO_CURTO}}</p>
+      </div>
+    </div>
+    <div class="slide__foot" style="color:var(--ink)"><svg class="logo" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg><span>{{NN}}</span></div>
+  </div>
+</section>

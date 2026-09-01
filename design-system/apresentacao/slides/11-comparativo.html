@@ -1,0 +1,39 @@
+<!-- 11-comparativo — duas colunas lado a lado (antes/depois, com Podi/sem Podi).
+     A coluna que a Podi defende leva o topo verde; a outra fica neutra.
+     Não usar vermelho: a comparação é factual, não acusatória. -->
+<style>
+.comp{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:64px}
+.comp__col{background:var(--surface);border-radius:var(--r-card);overflow:hidden;
+  display:flex;flex-direction:column}
+.comp__topo{padding:40px 48px;background:var(--surface-alt)}
+.comp__topo--on{background:var(--accent);color:var(--ink)}
+.comp__lista{padding:48px;display:flex;flex-direction:column;gap:32px;flex:1}
+.comp__item{display:flex;gap:24px;align-items:flex-start}
+.comp__pt{flex:none;width:14px;height:14px;border-radius:50%;background:var(--accent-2);margin-top:14px}
+.comp__pt--off{background:var(--hairline)}
+</style>
+<section class="slide slide--light">
+  <div class="slide__pad">
+    <h2 class="t-slide">{{TITULO_DO_SLIDE}}</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <div class="comp">
+      <div class="comp__col">
+        <div class="comp__topo"><span class="t-card-sm">{{SEM_PODI}}</span></div>
+        <div class="comp__lista">
+          <div class="comp__item"><span class="comp__pt comp__pt--off"></span><span class="t-body">{{PONTO}}</span></div>
+          <div class="comp__item"><span class="comp__pt comp__pt--off"></span><span class="t-body">{{PONTO}}</span></div>
+          <div class="comp__item"><span class="comp__pt comp__pt--off"></span><span class="t-body">{{PONTO}}</span></div>
+        </div>
+      </div>
+      <div class="comp__col">
+        <div class="comp__topo comp__topo--on"><span class="t-card-sm">{{COM_PODI}}</span></div>
+        <div class="comp__lista">
+          <div class="comp__item"><span class="comp__pt"></span><span class="t-body">{{PONTO}}</span></div>
+          <div class="comp__item"><span class="comp__pt"></span><span class="t-body">{{PONTO}}</span></div>
+          <div class="comp__item"><span class="comp__pt"></span><span class="t-body">{{PONTO}}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__foot"><svg class="logo logo--verde" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg><span>{{NN}}</span></div>
+  </div>
+</section>

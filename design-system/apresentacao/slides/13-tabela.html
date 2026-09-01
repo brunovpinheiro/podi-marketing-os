@@ -1,0 +1,29 @@
+<!-- 13-tabela — planos, escopo, comparativo de números. Máximo 6 linhas e 4 colunas:
+     tabela grande não se lê projetada, vira anexo do PDF. -->
+<style>
+.tab{width:100%;border-collapse:collapse;background:var(--surface);
+  border-radius:var(--r-card);overflow:hidden;margin-top:64px}
+.tab th{text-align:left;padding:32px 40px;font-size:24px;line-height:32px;font-weight:700;
+  color:var(--ink);background:var(--accent);border-bottom:2px solid var(--accent-2-line)}
+.tab td{padding:32px 40px;font-size:24px;line-height:34px;color:var(--body);
+  border-bottom:1px solid var(--hairline)}
+.tab tr:nth-child(even) td{background:var(--surface-alt)}
+.tab tr:last-child td{border-bottom:none}
+.tab td:first-child{color:var(--ink);font-weight:700}
+</style>
+<section class="slide slide--light">
+  <div class="slide__pad">
+    <h2 class="t-slide">{{TITULO_DO_SLIDE}}</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <table class="tab">
+      <thead><tr><th>{{COLUNA}}</th><th>{{COLUNA}}</th><th>{{COLUNA}}</th><th>{{COLUNA}}</th></tr></thead>
+      <tbody>
+        <tr><td>{{LINHA}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td></tr>
+        <tr><td>{{LINHA}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td></tr>
+        <tr><td>{{LINHA}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td></tr>
+        <tr><td>{{LINHA}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td><td>{{VALOR}}</td></tr>
+      </tbody>
+    </table>
+    <div class="slide__foot"><svg class="logo logo--verde" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg><span>Fonte: {{FONTE_DO_DADO}}</span><span>{{NN}}</span></div>
+  </div>
+</section>

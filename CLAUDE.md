@@ -5,7 +5,8 @@ Publicidade da **Podi**. Guarda os recursos **oficiais** da marca — brand, des
 templates, skills — para que qualquer pessoa do time produza material com IA sem
 reinventar o padrão.
 
-Hoje o único material coberto é **newsletter / e-mail**. A estrutura já prevê outros.
+Hoje os materiais cobertos são **newsletter / e-mail** e **apresentação / deck**.
+A estrutura já prevê outros.
 
 Este arquivo é a **camada global**. Ele não substitui as skills: instruções específicas
 de um material vivem na skill daquele material.
@@ -100,6 +101,11 @@ Estão detalhadas nas camadas certas, mas ficam repetidas aqui porque errar nela
   visual nova, e o bloco `STYLE LOCK` se copia sem editar uma palavra.
 - **Newsletter é HTML de e-mail, não de site.** Só tabelas, CSS inline, sem flex/grid/var().
   (`design-system/newsletter/guidelines/email-compat.md`)
+- **O roxo `#9934FF` é só detalhe gráfico** — ícone, régua sob título, bullet, borda fina.
+  Nunca texto, nunca título, nunca fundo de área grande, nunca sobre o verde.
+  (`brand/README.md`, `design-system/apresentacao/guidelines/uso-do-roxo.md`)
+- **Apresentação é canvas fixo de 1920 × 1080.** O que não cabe vira outro slide — nunca
+  fonte menor. (`design-system/apresentacao/guidelines/canvas-16-9.md`)
 
 ---
 
@@ -136,8 +142,8 @@ Detalhes: `docs/governanca.md`.
 ## 6. Como usar cada camada
 
 **Skills.** Ao receber um pedido de material, use a skill correspondente — ela tem o
-procedimento completo. Newsletter → `/newsletter-podi`. Foto de marca → `/foto-podi`.
-Índice em `skills/README.md`.
+procedimento completo. Newsletter → `/newsletter-podi`. Apresentação → `/apresentacao-podi`.
+Foto de marca → `/foto-podi`. Índice em `skills/README.md`.
 
 Toda skill oficial termina em `-podi`. É o que diferencia o padrão da marca de qualquer
 outro comando disponível na ferramenta.
@@ -151,6 +157,11 @@ original por campanha.
 **Fotografia.** Toda imagem fotográfica de marca — gerada por IA ou dirigida em produção —
 obedece a `brand/photography/STYLE-LOCK-PODI.md`. É Brand, não design system: vale para
 qualquer material. Não vale para print de tela, montagem gráfica ou ilustração.
+
+**Comando `/design`.** Uma apresentação pode ser levada para o canvas do `/design` quando a
+pessoa quiser editar o visual à mão. O `/design` **não decide identidade**: cor, tipografia
+e uso do roxo vêm do design system, passados no briefing do canvas. Se o canvas voltar fora
+do sistema, é o canvas que se corrige. Procedimento em `/apresentacao-podi` §4.
 
 **Exemplos.** `examples/<material>/` mostra o resultado esperado. É leitura, não destino
 de escrita — nunca grave lá.

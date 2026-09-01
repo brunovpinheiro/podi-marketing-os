@@ -1,0 +1,22 @@
+<!-- 07-mockup-app — mockup de celular à esquerda sobre o verde, conteúdo à direita
+     em faixa branca. É o layout do slide "Plataforma mobile que conecta...". -->
+<style>
+.mock{flex-direction:row;padding:0}
+.mock__esq{width:800px;flex:none;background:var(--page);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px;padding:96px 64px}
+.mock__esq img.tel{width:auto;max-width:520px;max-height:760px;border-radius:var(--r-img);
+  box-shadow:0 40px 80px rgba(0,0,0,.18)}
+.mock__dir{flex:1;background:var(--surface);border-radius:64px 0 0 64px;margin-left:-64px;
+  padding:96px 96px 96px 128px;display:flex;flex-direction:column;justify-content:center;gap:40px}
+</style>
+<section class="slide mock">
+  <div class="mock__esq">
+    <svg class="logo" style="width:280px" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg>
+    <img class="tel" src="assets/mockup-app.jpg" alt="Pessoa usando o app Podi no shopping">
+  </div>
+  <div class="mock__dir">
+    <h2 class="t-slide" style="max-width:900px">{{TITULO}}</h2>
+    <div class="regua"></div>
+    <p class="t-body" style="max-width:900px">{{PARAGRAFO}}</p>
+  </div>
+</section>

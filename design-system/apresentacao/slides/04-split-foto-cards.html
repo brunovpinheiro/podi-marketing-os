@@ -1,0 +1,58 @@
+<!-- 04-split-foto-cards — foto sangrando à esquerda, grade 2x2 de cards à direita.
+     É o layout do slide "Simplicidade / Conveniência / Engajamento / Inovação".
+     A foto sangra: este slide não usa .slide__pad.
+
+     Os cantos arredondados vão sempre no lado de DENTRO — o que encosta no
+     conteúdo. Foto à esquerda: arredonda a direita. Para espelhar (foto à
+     direita, cards à esquerda), acrescentar a classe `split--dir` no <section>:
+     ela inverte a ordem e o lado do raio de uma vez. -->
+<style>
+.split{flex-direction:row;padding:0}
+.split__foto{width:960px;flex:none;position:relative;overflow:hidden;
+  border-radius:0 64px 64px 0}
+.split--dir{flex-direction:row-reverse}
+.split--dir .split__foto{border-radius:64px 0 0 64px}
+.split__foto img{width:100%;height:100%;object-fit:cover;display:block}
+.split__cards{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:64px}
+.split__card{background:var(--surface);border-radius:var(--r-card);padding:48px;
+  display:flex;flex-direction:column;justify-content:space-between}
+</style>
+<section class="slide split">
+  <div class="split__foto">
+    <img src="assets/foto-split.jpg" alt="{{DESCRICAO_DA_FOTO}}">
+  </div>
+  <div class="split__cards">
+    <div class="split__card">
+      <div class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg></div>
+      <div>
+        <h3 class="t-card">{{TITULO}}</h3>
+        <div class="regua" style="margin:24px 0"></div>
+        <p class="t-body-sm">{{TEXTO_CURTO}}</p>
+      </div>
+    </div>
+    <div class="split__card">
+      <div class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="2" width="12" height="20" rx="3"/></svg></div>
+      <div>
+        <h3 class="t-card">{{TITULO}}</h3>
+        <div class="regua" style="margin:24px 0"></div>
+        <p class="t-body-sm">{{TEXTO_CURTO}}</p>
+      </div>
+    </div>
+    <div class="split__card">
+      <div class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0z"/></svg></div>
+      <div>
+        <h3 class="t-card">{{TITULO}}</h3>
+        <div class="regua" style="margin:24px 0"></div>
+        <p class="t-body-sm">{{TEXTO_CURTO}}</p>
+      </div>
+    </div>
+    <div class="split__card">
+      <div class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-9 9-5 2 2-5z"/></svg></div>
+      <div>
+        <h3 class="t-card">{{TITULO}}</h3>
+        <div class="regua" style="margin:24px 0"></div>
+        <p class="t-body-sm">{{TEXTO_CURTO}}</p>
+      </div>
+    </div>
+  </div>
+</section>

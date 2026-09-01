@@ -1,0 +1,19 @@
+<!-- 00-capa — abertura do deck. Verde cheio, logo grande, tagline.
+     Texto sobre o verde é sempre #101010 (var(--ink)) — branco é proibido.
+     O logo é forma, não texto: sobre o verde ele vai branco, pela classe .logo. -->
+<style>
+.capa{justify-content:center;align-items:flex-start;gap:48px}
+.capa__tag{max-width:1100px}
+.capa__meta{display:flex;gap:32px;align-items:center;color:var(--ink);opacity:.7;
+  font-size:24px;line-height:32px}
+</style>
+<section class="slide">
+  <div class="slide__pad capa">
+    <svg class="logo" style="width:520px" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg>
+    <h1 class="t-capa capa__tag">Pensou em Shopping<br>ou Outlet? <strong>Pensou Podi!</strong></h1>
+    <div class="regua"></div>
+    <div class="capa__meta">
+      <span>{{CLIENTE_OU_AREA}}</span><span>·</span><span>{{MES}} de {{ANO}}</span>
+    </div>
+  </div>
+</section>

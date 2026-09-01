@@ -10,6 +10,81 @@ entra sozinho no próximo e-mail.
 
 ---
 
+## 2026-09-01 — apresentações e cor secundária
+
+O repositório deixou de cobrir um material só. **Apresentação** entra ao lado de newsletter,
+com design system, template e skill próprios — e o roxo que o time já usava nos slides vira
+regra escrita.
+
+### Adicionado
+
+- **Cor secundária de marca `#9934FF`** em `brand/README.md`. Ela já existia de fato — nos
+  slides do time e como variante de ícone social — mas sem regra escrita, o que na prática
+  significa que cada peça decidia sozinha. Agora está definida como **detalhe gráfico**:
+  ícone, régua sob título, bullet, borda fina. Nunca texto, nunca título, nunca fundo de
+  área grande, nunca sobre o verde (2,4:1).
+  O contraste sobre branco passaria em texto (4,9:1) — a regra é mais restritiva **de
+  propósito**: o verde é a marca, o roxo é tempero. Sem esse limite, em três campanhas o
+  deck vira roxo e deixa de parecer Podi.
+- **`design-system/apresentacao/`** — tokens de projeção (corpo a partir de 28px, título de
+  slide a 64px), os quatro tokens do roxo, canvas fixo, uso do roxo, ritmo do deck e QA.
+  Nasceu ao lado de `newsletter/` e **não herdou nada de e-mail**: aqui flex, grid e `var()`
+  são obrigatórios, e as regras de `email-compat.md` não valem.
+- **16 tipos de slide** em `design-system/apresentacao/slides/`, do `00-capa` ao
+  `15-encerramento`, mais o shell `_slide.html`. Quatro deles — capa, split foto + cards,
+  features em duas colunas e mockup de app — são a formalização dos três layouts que o time
+  já vinha usando. O padrão **descreve o que existia**; não inventou direção visual nova.
+- **`brand/assets/header/logo-podi.svg`** — o logo Podi sozinho, em vetor **monocromático**.
+  Não tem cor gravada: a cor vem de fora, por `currentColor`. Era a peça que faltava — os
+  PNGs existentes são verdes, e logo verde sobre fundo verde some, o que obrigava a enfiar o
+  logo dentro de uma placa branca em toda capa. Agora ele vai branco direto sobre o verde,
+  como nos decks que o time já fazia.
+  Junto veio a regra em `brand/README.md`: **logo não é texto**. A regra de contraste do
+  verde governa palavras; o logo é marca gráfica, e branco sobre o verde é como a Podi
+  assina. O que continua proibido é recolorir por `filter` ou por efeito.
+- **O rodapé de todo slide é assinado pelo logo**, não pela palavra "Podi". Assinatura de
+  marca é a marca; texto no lugar dela é o tipo de detalhe que ninguém nota no slide 3 e
+  incomoda no slide 15. Sobre fundo claro o logo é sempre o verde original `#48DB84`, em
+  qualquer tamanho: ali ele é assinatura discreta, não alvo de leitura — o mesmo raciocínio
+  já escrito para o ícone social verde do rodapé do e-mail.
+- **`templates/apresentacao/base.html`** — shell com os tokens no `:root`, canvas de
+  1920 × 1080, escala automática para preview na tela e `@page` configurado para o PDF sair
+  em paisagem com um slide por página. O logo entra como `<symbol>` carregado uma vez só;
+  os slides o usam por `<use href="#logo-podi">`, para o desenho não ser copiado três vezes
+  dentro do mesmo arquivo.
+- **Skill `/apresentacao-podi`** — lê o briefing, define o roteiro (número, tipo de slide,
+  o que ele diz), **confirma o roteiro antes de montar**, monta em `saida/<slug>/` e roda o
+  QA. A confirmação do roteiro é o passo que evita o erro caro do material: refazer 18
+  slides prontos custa o dobro de discordar de uma lista.
+- **Rota `/design`** documentada na skill (§4) e no `CLAUDE.md`. Quem quiser editar o visual
+  à mão leva o mesmo conteúdo para o canvas do `/design` — mas **o `/design` não decide
+  identidade**: cor, tipografia e uso do roxo vão no briefing do canvas, prontos. Canvas
+  fora do sistema se corrige; design system não.
+
+### Alterado
+
+- **`CLAUDE.md`** — a frase "hoje o único material coberto é newsletter" saiu, e duas regras
+  não negociáveis entraram: o roxo de detalhe e o canvas fixo de 1920 × 1080.
+- **`brand/README.md`** — nova seção "Cor secundária" e o ponteiro de tokens agora aponta
+  para os dois materiais.
+- **`docs/estrutura.md`, `skills/README.md`, `saida/README.md`** atualizados com a pasta
+  nova, a skill nova e o que fazer com o deck pronto (o PDF, e mandar a pasta inteira —
+  o HTML sozinho perde as imagens).
+
+### O que ficou de fora, de propósito
+
+- **Export nativo para `.pptx`.** O PDF cobre o uso real e trava a tipografia; um `.pptx`
+  gerado substituiria a Inter na máquina de quem abrisse e desmontaria o espaçamento. Quem
+  precisa do PowerPoint importa o PDF como imagem de fundo. Deck que precise ser **editado**
+  no PowerPoint depois é um pedido diferente — falar com quem cuida do padrão.
+- **Subir tokens comuns de newsletter + apresentação para `brand/`.** Agora existem dois
+  casos de uso reais, então a promoção finalmente pode ser discutida — mas ela é uma
+  mudança estrutural, e mudança estrutural não entra junto com o material que a motivou.
+- **`examples/apresentacao/`.** Acervo é curado a partir de trabalho real entregue. O
+  primeiro deck montado com o padrão é o candidato natural.
+
+---
+
 ## 2026-09-01 — skill de foto e sufixo `-podi`
 
 ### Adicionado

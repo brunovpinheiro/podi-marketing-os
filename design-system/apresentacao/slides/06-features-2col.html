@@ -1,0 +1,41 @@
+<!-- 06-features-2col — lista longa de recursos, duas colunas, ícone roxo por item.
+     O container tem borda fina roxa: é o único lugar onde a borda roxa aparece.
+     Até 12 itens. Passou disso, vira dois slides. -->
+<style>
+.feat{background:var(--surface);border:2px solid var(--accent-2-line);border-radius:var(--r-card);
+  padding:64px;margin-top:48px;flex:1}
+.feat__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 64px}
+.feat__item{display:flex;gap:24px;align-items:flex-start}
+.feat__ico{flex:none;width:48px;height:48px;border-radius:12px;background:var(--accent-2-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--accent-2)}
+.feat__ico svg{width:24px;height:24px}
+</style>
+<section class="slide slide--light">
+  <div class="slide__pad">
+    <h2 class="t-slide">{{TITULO_DO_SLIDE}}</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <div class="feat">
+      <div class="feat__grid">
+        <div class="feat__item">
+          <span class="feat__ico"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="t-body">{{RECURSO}}</span></div>
+        <div class="feat__item">
+          <span class="feat__ico"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="t-body">{{RECURSO}}</span></div>
+        <div class="feat__item">
+          <span class="feat__ico"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="t-body">{{RECURSO}}</span></div>
+        <div class="feat__item">
+          <span class="feat__ico"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="t-body">{{RECURSO}}</span></div>
+        <div class="feat__item">
+          <span class="feat__ico"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="t-body">{{RECURSO}}</span></div>
+        <div class="feat__item">
+          <span class="feat__ico"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></span>
+          <span class="t-body">{{RECURSO}}</span></div>
+      </div>
+    </div>
+    <div class="slide__foot"><svg class="logo logo--verde" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg><span>{{NN}}</span></div>
+  </div>
+</section>

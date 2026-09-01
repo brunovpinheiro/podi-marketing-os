@@ -1,0 +1,34 @@
+<!-- 12-timeline — trilho horizontal de marcos. 3 a 5 marcos; mais que isso não se lê
+     de longe. O ponto do marco é roxo; o trilho é neutro. -->
+<style>
+.tl{flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:48px}
+.tl__trilho{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.tl__trilho::before{content:'';position:absolute;left:0;right:0;top:19px;height:2px;background:var(--hairline)}
+.tl__marco{position:relative;display:flex;flex-direction:column;gap:24px}
+.tl__pt{width:40px;height:40px;border-radius:50%;background:var(--accent-2-soft);
+  border:8px solid var(--accent-2);box-sizing:border-box;position:relative;z-index:1}
+.tl__card{background:var(--surface);border-radius:var(--r-card-sm);padding:40px}
+</style>
+<section class="slide slide--light">
+  <div class="slide__pad">
+    <h2 class="t-slide">{{TITULO_DO_SLIDE}}</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <div class="tl">
+      <div class="tl__trilho">
+        <div class="tl__marco"><span class="tl__pt"></span>
+          <div class="tl__card"><strong class="t-card-sm">{{QUANDO}}</strong>
+            <p class="t-body-sm" style="margin-top:16px">{{O_QUE_ACONTECE}}</p></div></div>
+        <div class="tl__marco"><span class="tl__pt"></span>
+          <div class="tl__card"><strong class="t-card-sm">{{QUANDO}}</strong>
+            <p class="t-body-sm" style="margin-top:16px">{{O_QUE_ACONTECE}}</p></div></div>
+        <div class="tl__marco"><span class="tl__pt"></span>
+          <div class="tl__card"><strong class="t-card-sm">{{QUANDO}}</strong>
+            <p class="t-body-sm" style="margin-top:16px">{{O_QUE_ACONTECE}}</p></div></div>
+        <div class="tl__marco"><span class="tl__pt"></span>
+          <div class="tl__card"><strong class="t-card-sm">{{QUANDO}}</strong>
+            <p class="t-body-sm" style="margin-top:16px">{{O_QUE_ACONTECE}}</p></div></div>
+      </div>
+    </div>
+    <div class="slide__foot"><svg class="logo logo--verde" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg><span>{{NN}}</span></div>
+  </div>
+</section>

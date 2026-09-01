@@ -5,6 +5,7 @@
 | O que | Onde |
 |---|---|
 | Newsletter montada (`/newsletter-podi`) | `saida/<slug>/index.html` |
+| Apresentação montada (`/apresentacao-podi`) | `saida/<slug>/index.html` + `assets/` |
 | Prompt de foto de marca (`/foto-podi`) | `saida/fotos/NNN-slug.md` |
 
 **O que você monta fica só no seu computador.** Nada daqui é enviado para lugar nenhum
@@ -18,6 +19,13 @@ no padrão sem querer.
 1. Conferir no navegador (ver "Preview local" no [README](../README.md) da raiz).
 2. Testar o disparo pela ferramenta de envio ou por Litmus / Email on Acid.
 3. Subir as imagens no servidor e trocar os caminhos relativos pelas URLs finais.
+
+*(apresentação)*
+
+1. Abrir o `index.html` no navegador — o deck já aparece na escala da janela.
+2. Cmd+P → paisagem, margens **nenhuma**, "imprimir fundos" **ligado** → salvar em PDF.
+3. Para mandar para alguém, mandar a **pasta inteira** (o HTML sozinho perde as imagens)
+   ou só o PDF.
 
 ## Diferença para `examples/`
 

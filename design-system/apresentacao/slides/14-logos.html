@@ -1,0 +1,25 @@
+<!-- 14-logos — shoppings, outlets e parceiros. Caixa de tamanho fixo por logo,
+     logo centralizado e em uma cor só: arquivo colorido de terceiro desalinha a grade. -->
+<style>
+.logos{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:64px}
+.logos__box{background:var(--surface);border-radius:var(--r-card-sm);
+  display:flex;align-items:center;justify-content:center;padding:40px}
+.logos__box img{max-width:240px;max-height:120px;width:auto;height:auto;display:block}
+</style>
+<section class="slide">
+  <div class="slide__pad">
+    <h2 class="t-slide">{{TITULO_DO_SLIDE}}</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <div class="logos">
+      <div class="logos__box"><img src="assets/logo-cliente-01.png" alt="{{NOME}}"></div>
+      <div class="logos__box"><img src="assets/logo-cliente-02.png" alt="{{NOME}}"></div>
+      <div class="logos__box"><img src="assets/logo-cliente-03.png" alt="{{NOME}}"></div>
+      <div class="logos__box"><img src="assets/logo-cliente-04.png" alt="{{NOME}}"></div>
+      <div class="logos__box"><img src="assets/logo-cliente-05.png" alt="{{NOME}}"></div>
+      <div class="logos__box"><img src="assets/logo-cliente-06.png" alt="{{NOME}}"></div>
+      <div class="logos__box"><img src="assets/logo-cliente-07.png" alt="{{NOME}}"></div>
+      <div class="logos__box"><img src="assets/logo-cliente-08.png" alt="{{NOME}}"></div>
+    </div>
+    <div class="slide__foot" style="color:var(--ink)"><svg class="logo" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg><span>{{NN}}</span></div>
+  </div>
+</section>

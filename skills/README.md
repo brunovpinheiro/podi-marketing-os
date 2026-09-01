@@ -7,6 +7,7 @@ divergindo, então esta pasta é apenas o índice.
 | Skill | Arquivo | O que faz |
 |---|---|---|
 | `newsletter-podi` | [`.claude/skills/newsletter-podi/SKILL.md`](../.claude/skills/newsletter-podi/SKILL.md) | Monta uma newsletter ou informativo da Podi a partir de um briefing em `projects/_inbox/<slug>/` |
+| `apresentacao-podi` | [`.claude/skills/apresentacao-podi/SKILL.md`](../.claude/skills/apresentacao-podi/SKILL.md) | Monta uma apresentação 16:9 da Podi a partir de um briefing em `projects/_inbox/<slug>/` |
 | `foto-podi` | [`.claude/skills/foto-podi/SKILL.md`](../.claude/skills/foto-podi/SKILL.md) | Escreve o prompt de uma foto de marca da Podi, seguindo o Style Lock de `brand/photography/` |
 
 ## Como usar
@@ -26,7 +27,7 @@ para o arquivo `SKILL.md` da tabela acima junto com o `CLAUDE.md` da raiz.
 
 ## O sufixo `-podi`
 
-Toda skill oficial termina em **`-podi`**: `/newsletter-podi`, `/foto-podi`. A ferramenta de
+Toda skill oficial termina em **`-podi`**: `/newsletter-podi`, `/apresentacao-podi`, `/foto-podi`. A ferramenta de
 IA traz dezenas de comandos próprios, e sem o sufixo não dá para saber, na hora de digitar,
 qual deles é o padrão da marca. Skill nova nasce com o sufixo.
 

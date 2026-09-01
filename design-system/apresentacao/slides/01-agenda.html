@@ -1,0 +1,29 @@
+<!-- 01-agenda — o que o deck vai cobrir. Bullet roxo, dentro de card branco. -->
+<style>
+.agenda__grid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-content:start;margin-top:64px}
+.agenda__item{display:flex;gap:32px;align-items:flex-start;background:var(--surface);
+  border-radius:var(--r-card-sm);padding:40px 48px}
+.agenda__n{flex:none;width:16px;height:16px;border-radius:50%;background:var(--accent-2);margin-top:16px}
+.agenda__txt strong{display:block;font-size:32px;line-height:40px;font-weight:700;color:var(--ink)}
+</style>
+<section class="slide">
+  <div class="slide__pad">
+    <h2 class="t-slide">O que vamos ver</h2>
+    <div class="regua" style="margin-top:24px"></div>
+    <div class="agenda__grid">
+      <div class="agenda__item"><span class="agenda__n"></span>
+        <div class="agenda__txt"><strong>01 · {{TITULO}}</strong>
+          <p class="t-body-sm" style="margin-top:8px">{{LINHA_DE_APOIO}}</p></div></div>
+      <div class="agenda__item"><span class="agenda__n"></span>
+        <div class="agenda__txt"><strong>02 · {{TITULO}}</strong>
+          <p class="t-body-sm" style="margin-top:8px">{{LINHA_DE_APOIO}}</p></div></div>
+      <div class="agenda__item"><span class="agenda__n"></span>
+        <div class="agenda__txt"><strong>03 · {{TITULO}}</strong>
+          <p class="t-body-sm" style="margin-top:8px">{{LINHA_DE_APOIO}}</p></div></div>
+      <div class="agenda__item"><span class="agenda__n"></span>
+        <div class="agenda__txt"><strong>04 · {{TITULO}}</strong>
+          <p class="t-body-sm" style="margin-top:8px">{{LINHA_DE_APOIO}}</p></div></div>
+    </div>
+    <div class="slide__foot" style="color:var(--ink)"><svg class="logo" viewBox="0 0 263 128" role="img" aria-label="Podi"><title>Podi</title><use href="#logo-podi"/></svg><span>02</span></div>
+  </div>
+</section>

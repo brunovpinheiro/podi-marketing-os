@@ -1,0 +1,18 @@
+<!-- 09-foto-full — foto sangrada de slide inteiro com faixa de legenda.
+     A foto obedece a brand/photography/STYLE-LOCK-PODI.md. Texto nunca vai solto
+     sobre a foto: vai na faixa branca, onde o contraste é garantido. -->
+<style>
+.full{padding:0;position:relative}
+.full__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.full__faixa{position:relative;background:var(--surface);
+  border-radius:var(--r-card) var(--r-card) 0 0;margin:auto 96px 0;padding:64px 80px;
+  display:flex;flex-direction:column;gap:24px;max-width:1100px}
+</style>
+<section class="slide full">
+  <img class="full__img" src="assets/foto-full.jpg" alt="{{DESCRICAO_DA_FOTO}}">
+  <div class="full__faixa">
+    <h2 class="t-card">{{TITULO}}</h2>
+    <div class="regua"></div>
+    <p class="t-body-sm">{{LEGENDA}}</p>
+  </div>
+</section>
