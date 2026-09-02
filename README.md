@@ -34,6 +34,13 @@ lugar — avise quem cuida do padrão.
 
 ## Como usar
 
+Primeira vez aqui? Comece por [`docs/como-usar.md`](docs/como-usar.md) — é o guia da
+apresentação, do zero ao primeiro e-mail montado.
+
+**0. Quer testar antes?** O repositório traz um briefing fictício em
+[`examples/briefing-demo/`](examples/briefing-demo/) — é só pedir *"copia o briefing de
+demonstração para o meu inbox e monta a newsletter"*.
+
 **1. Monte a pasta do envio** em `projects/_inbox/`, com o documento de textos e as imagens.
 O guia completo é o [`docs/como-enviar-conteudo.md`](docs/como-enviar-conteudo.md) — leia
 antes do primeiro envio, ele explica como nomear as imagens.
@@ -152,8 +159,13 @@ aponte para o `CLAUDE.md` e para o `SKILL.md` do material.
 - **Design system da newsletter:** [`design-system/newsletter/README.md`](design-system/newsletter/README.md)
 - **Componentes:** [`design-system/newsletter/components/README.md`](design-system/newsletter/components/README.md)
 - **Checklist de QA:** [`design-system/newsletter/guidelines/qa-checklist.md`](design-system/newsletter/guidelines/qa-checklist.md)
+- **Como usar, do zero:** [`docs/como-usar.md`](docs/como-usar.md)
 - **Como enviar conteúdo:** [`docs/como-enviar-conteudo.md`](docs/como-enviar-conteudo.md)
 - **Mudanças no padrão:** [`CHANGELOG.md`](CHANGELOG.md)
+
+### Para testar
+
+Briefing fictício, com textos e imagens: [`examples/briefing-demo/`](examples/briefing-demo/).
 
 ### Exemplos montados
 

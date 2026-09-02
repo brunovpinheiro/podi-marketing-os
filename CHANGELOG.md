@@ -10,6 +10,50 @@ entra sozinho no próximo e-mail.
 
 ---
 
+## 2026-09-01 — briefing de demonstração no repositório
+
+Quem instalava o Marketing OS pela primeira vez não tinha o que montar: `projects/_inbox/`
+nasce vazia e não é versionada. Agora o repositório traz um briefing fictício pronto.
+
+### Adicionado
+
+- **`examples/briefing-demo/`** — `brief.md` com cabeçalho de envio e três notícias
+  numeradas, mais `imagens/` com as quatro imagens nos nomes e proporções certos
+  (`capa.jpg`, `01-`, `02-`, `03-…-1x1`). As imagens são placas de teste em cores dos
+  tokens, não fotografia — a direção fotográfica continua valendo só para foto de verdade.
+- **Chamadas para a pasta** no `README.md` e no `docs/como-usar.md`.
+
+### Por quê
+
+O primeiro contato com o padrão não pode depender de haver conteúdo real na mão. Com o
+briefing de demonstração, a pessoa monta um e-mail completo no mesmo dia em que instala —
+e vê o descadastro, o layout lateral do bloco 1:1 e o relatório final funcionando.
+
+---
+
+
+## 2026-09-01 — guia "Como usar" em Markdown
+
+A apresentação de introdução ao Marketing OS virou documento. O deck continua servindo à
+gravação; o Markdown é o que fica no repositório para quem chegar pelo vídeo.
+
+### Adicionado
+
+- **`docs/como-usar.md`** — o conteúdo dos 16 slides em texto: as quatro camadas, a
+  instalação, as três skills, o passo a passo do Podi News, as regras não negociáveis e as
+  dúvidas frequentes. Começa com um bloco endereçado ao Claude Code, para que ele saiba o
+  que fazer quando alguém colar o link do repositório e pedir para preparar a pasta.
+- **Link no `README.md`**, no começo do "Como usar" e na referência rápida.
+
+### Por quê
+
+O vídeo pede um destino: a pessoa cola o link, manda ler um documento e o ambiente fica
+pronto. Um deck em HTML não serve para isso — o Claude precisa de texto, e quem assistiu
+precisa de um lugar para voltar depois.
+
+---
+
+
 ## 2026-09-01 — Podi é sempre masculino
 
 A marca era tratada ora no masculino, ora no feminino. Fica definido: **o Podi**, **do Podi**,
